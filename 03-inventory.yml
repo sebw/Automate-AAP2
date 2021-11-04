@@ -1,0 +1,34 @@
+---
+- name: Create my inventory
+  hosts: localhost
+  gather_facts: False
+
+  vars_files:
+  - vault.yml
+
+  collections:
+  - ansible.controller
+
+  tasks:
+  - name: Making sure the inventory exists
+    ansible.controller.inventory:
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+      name: "Foo inventory"
+      description: "Foo bar inventory"
+      organization: "Foo"
+      state: present
+
+  - name: Add a host to the new inventory
+    ansible.controller.host:
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+      inventory: "Foo inventory"
+      state: present
+      name: localhost
+      variables:
+        example: 123

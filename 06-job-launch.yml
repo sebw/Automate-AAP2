@@ -1,0 +1,19 @@
+---
+- name: Start a job
+  hosts: localhost
+  gather_facts: False
+
+  vars_files:
+  - vault.yml
+
+  collections:
+  - ansible.controller
+
+  tasks:
+  - name: Job launch
+    ansible.controller.job_launch:
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+      job_template: "Foo job"

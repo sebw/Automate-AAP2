@@ -1,0 +1,38 @@
+---
+- name: 💥💥💥 Simulate a disaster! 💥💥💥
+  hosts: localhost
+  gather_facts: False
+
+  vars_files:
+  - vault.yml
+
+  collections:
+  - ansible.controller
+
+  tasks:
+  - name: 🧨 Nuke the org 🧨
+    ansible.controller.organization:
+      name: "Foo"
+      state: absent
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+
+  - name: 🧨 Nuke the project 🧨
+    ansible.controller.project:
+      name: "Foo"
+      state: absent
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+
+  - name: 🧨 Nuke the job 🧨
+    ansible.controller.job_template:
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+      name: "Foo job"
+      state: absent
