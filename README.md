@@ -14,6 +14,18 @@ As your automation footprint grows, the few clicks become a large amount of clic
 
 So, instead, why not automate your automation?
 
+## Vault variables
+
+Some variables are located in the encrypted `vault.yml`.
+
+If you want to pass your own variables, your vault should look like this:
+
+```
+aap2_host: my.aap2.example.com
+aap2_username: your-user
+aap2_password: your-password
+```
+
 ## Demo Content
 
 In this demo, we will use Ansible playbooks to automate your day 2 operations:
