@@ -35,6 +35,7 @@ We assume Ansible Automation Platform is already installed. You will need the ho
 
 ```
 git clone https://github.com/RedHatBelux/Automate-AAP2
+cd Automate-AAP2
 ansible-vault create vault.yml (fill in your AAP details in there, see below for sample)
 vim vars.yml
 for i in $(ls -1 *.yml); do ansible-playbook -i $i; done
