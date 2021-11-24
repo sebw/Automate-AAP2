@@ -13,7 +13,7 @@
   tasks:
   - name: 🧨 Nuke the org 🧨
     ansible.controller.organization:
-      name: "{{ customer }}"
+      name: "{{ customer }} org"
       state: absent
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
@@ -22,7 +22,7 @@
 
   - name: 🧨 Nuke the project 🧨
     ansible.controller.project:
-      name: "{{ customer }}"
+      name: "{{ customer }} project"
       state: absent
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
