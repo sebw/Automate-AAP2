@@ -5,6 +5,7 @@
 
   vars_files:
   - vault.yml
+  - vars.yml
 
   collections:
   - ansible.controller
@@ -12,7 +13,7 @@
   tasks:
   - name: Making sure the org exists
     ansible.controller.organization:
-      name: "Foo"
+      name: "{{ customer }} org"
       state: present
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"

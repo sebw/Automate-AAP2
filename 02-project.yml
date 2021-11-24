@@ -5,6 +5,7 @@
 
   vars_files:
   - vault.yml
+  - vars.yml
 
   collections:
   - ansible.controller
@@ -16,9 +17,9 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      name: "Foo"
-      description: "Foo bar project"
-      organization: "Foo"
+      name: "{{ customer }} project"
+      description: "{{ customer }} project"
+      organization: "{{ customer }} org"
       scm_type: git
       scm_update_on_launch: True
       scm_update_cache_timeout: 60

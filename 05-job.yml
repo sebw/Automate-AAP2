@@ -5,6 +5,7 @@
 
   vars_files:
   - vault.yml
+  - vars.yml
 
   collections:
   - ansible.controller
@@ -16,11 +17,11 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      name: "Foo job"
-      organization: "Foo"
+      name: "{{ customer }} job"
+      organization: "{{ customer }} org"
       state: present
-      project: "Foo"
-      inventory: "Foo inventory"
+      project: "{{ customer }} project"
+      inventory: "{{ customer }} inventory"
       playbook: "playbook.yml"
       credentials:
-      - "Foo root password"
+      - "{{ customer }} root password"

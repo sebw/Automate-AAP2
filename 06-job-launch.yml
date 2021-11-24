@@ -5,6 +5,7 @@
 
   vars_files:
   - vault.yml
+  - vars.yml
 
   collections:
   - ansible.controller
@@ -16,4 +17,4 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      job_template: "Foo job"
+      job_template: "{{ customer }} job"

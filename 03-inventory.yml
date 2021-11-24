@@ -5,6 +5,7 @@
 
   vars_files:
   - vault.yml
+  - vars.yml
 
   collections:
   - ansible.controller
@@ -16,9 +17,9 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      name: "Foo inventory"
-      description: "Foo bar inventory"
-      organization: "Foo"
+      name: "{{ customer }} inventory"
+      description: "{{ customer }} bar inventory"
+      organization: "{{ customer }} org"
       state: present
 
   - name: Add a host to the new inventory
@@ -27,7 +28,7 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      inventory: "Foo inventory"
+      inventory: "{{ customer }} inventory"
       state: present
       name: localhost
       variables:

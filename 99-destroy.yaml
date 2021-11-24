@@ -5,6 +5,7 @@
 
   vars_files:
   - vault.yml
+  - vars.yml
 
   collections:
   - ansible.controller
@@ -12,7 +13,7 @@
   tasks:
   - name: 🧨 Nuke the org 🧨
     ansible.controller.organization:
-      name: "Foo"
+      name: "{{ customer }}"
       state: absent
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
@@ -21,7 +22,7 @@
 
   - name: 🧨 Nuke the project 🧨
     ansible.controller.project:
-      name: "Foo"
+      name: "{{ customer }}"
       state: absent
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
@@ -34,5 +35,5 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      name: "Foo job"
+      name: "{{ customer }} job"
       state: absent
