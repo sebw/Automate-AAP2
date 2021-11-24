@@ -38,7 +38,7 @@ git clone https://github.com/RedHatBelux/Automate-AAP2
 cd Automate-AAP2
 ansible-vault create vault.yml (fill in your AAP details in there, see below for sample)
 vim vars.yml
-for i in $(ls -1 *.yml); do ansible-playbook $i; done
+for i in $(ls -1 0*.yml); do ansible-playbook $i; done
 ```
 
 `ansible.cfg` is configured to check the vault password in a `vault-password.txt` file. Update your configuration or command accordingly.
@@ -52,7 +52,7 @@ Want to simulate a disaster? 🧨
 Just run:
 
 ```bash
-ansible-playbook 99-destroy.yaml
+ansible-playbook 99-destroy.yml
 ```
 
 Then rerun:
