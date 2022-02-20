@@ -58,7 +58,7 @@ ansible-playbook 99-destroy.yml
 Then rerun:
 
 ```bash
-for i in $(ls -1 *.yml); do ansible-playbook -i $i; done
+for i in $(ls -1 0*.yml); do ansible-playbook $i; done
 ```
 
 You're back in business in a few minutes!
