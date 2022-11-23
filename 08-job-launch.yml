@@ -18,3 +18,4 @@
       controller_password: "{{ aap2_password }}"
       validate_certs: False
       job_template: "{{ customer }} JOB 1"
+      extra_vars: {'my_var': 'This is an indivual job'}

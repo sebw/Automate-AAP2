@@ -13,7 +13,7 @@
   tasks:
   - name: Create first job template
     ansible.controller.job_template:
-      description: "Created with IAC (05-jobs.yml)"
+      description: "Created with IAC (05-jobs.yml). This job requires a variable."
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
@@ -26,6 +26,8 @@
       playbook: "playbook.yml"
       credentials:
       - "{{ customer }} root password"
+      ask_extra_vars: true
+      extra_vars: {'my_var': 'This is the job default value'}
 
   - name: Create second job template
     ansible.controller.job_template:
