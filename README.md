@@ -2,17 +2,25 @@
 
 Demo Content - Automate your automation!
 
-A fully automated Ansible Automation Platform.
+A fully automated Ansible Automation Platform using infrastructure as code (IAC) practices.
 
 ## Context
 
-Installing and configuring Ansible Automation Platform is an easy process.
+Installing Ansible Automation Platform (day 1) is easy.
 
-You might be tempted to start configuring Ansible Controller (the new name of Ansible Tower!) manually, because it's just a few clicks in a web interface.
+Configuring Ansible Automation Platform (day 2) is also easy.
 
-As your automation footprint grows, the few clicks become a large amount of clicks.
+It's so easy it's tempting to get started fast and to create jobs and all kind of objects manually by clicking in the web interface.
 
-So why not automate your automation?
+But as your automation footprint grows, the few clicks become a large amount of clicks. You might also end up wondering if a job is still really needed or not. Who owns it anyway?
+
+As any platform you need governance (who can do what and when):
+
+- a solid RBAC model (which AAP has)
+- a scalable and flexible platform (which AAP is)
+- AUTOMATION
+
+That's right, you need to automate your automation platform! Let's embrace infrastructure as code and all its benefits (source control versioning, peer reviewing, etc.).
 
 ## Demo Content
 
@@ -22,54 +30,31 @@ In this demo, we will use simple Ansible playbooks taking advantage of the `Ansi
 - create a project
 - create an inventory containing one RHEL machine
 - create SSH credentials to manage your RHEL machine (for the sake of the demo, we intentionally didn't vault the password!)
-- create a job
-- launch the job
+- create three jobs
+- create a workflow including those jobs with a decision tree (success/fail)
+- launch the workflow
+- launch an individual job
 
-With this, you are fully embracing infrastructure as code practices.
+Now that you are doing infrastructure as code, in case of disaster, you might not even need to restore any backup. You just need to re-run those playbooks to rebuild your infrastructure!
 
-In case of disaster, you might not even need to restore backups. You just need to rerun those playbooks.
+## Day 2 operations
 
-## Day 2 operation
+We assume Ansible Automation Platform is already installed. You will need its hostname, a user with admin access and its password.
 
-We assume Ansible Automation Platform is already installed. You will need the hostname, a user with admin access and its password.
+### Clone this repository
 
 ```bash
-git clone https://github.com/RedHatBelux/Automate-AAP2
+git clone https://github.com/sebw/Automate-AAP2
 cd Automate-AAP2
-ansible-vault create vault.yml (fill in your AAP details in there, see below for sample)
-vim vars.yml
-for i in $(ls -1 0*.yml); do ansible-playbook $i; done
 ```
 
-`ansible.cfg` is configured to check the vault password in a `vault-password.txt` file. Update your configuration or command accordingly.
-
-When finished you will find your org, project, inventory, credential, job and a job should be already running.
-
-## Simulate a disaster and recover from it
-
-Want to simulate a disaster? 🧨
-
-Just run:
+### Create your vault containing your secrets
 
 ```bash
-ansible-playbook 99-destroy.yml
+ansible-vault create vault.yml
 ```
 
-Then rerun:
-
-```bash
-for i in $(ls -1 0*.yml); do ansible-playbook $i; done
-```
-
-You're back in business in a few minutes!
-
-## Vault variables
-
-Some variables are located in the encrypted `vault.yml`.
-
-If you want to pass your own variables, delete the existing `vault.yml` and recreate one using `ansible-vault create vault.yml`.
-
-Your vault structure should look like this:
+### Vault structure must look like this, adjust with your values
 
 ```yaml
 aap2_host: my.aap2.example.com
@@ -77,11 +62,70 @@ aap2_username: your-user
 aap2_password: your-password
 ```
 
+### Store your vault password in a file
+
+```bash
+echo "my_complex_vault_password" > vault-password.txt
+```
+
+Comment `vault_password_file` in `ansible.cfg` if you don't want to store your vault password in a file.
+
+### Now edit the variable file
+
+```bash
+vim vars.yml
+```
+
+### Fire up your playbooks
+
+```
+for i in $(ls -1 0*.yml); do ansible-playbook $i; done
+```
+
+The order of execution of playbooks is important, this is the reason why they are stored numerically. For example, a job can't be created if the organization doesn't exist.
+
+### Browse Ansible Automation Platform and find all objects
+
+- organization
+- project
+- inventory
+- credential
+- jobs
+- workflow
+
+If you check under "Jobs" you should see a workflow and related jobs running.
+
+## Simulate a disaster and recover from it
+
+Want to simulate a disaster? 🧨
+
+### Just run
+
+```bash
+ansible-playbook 99-destroy.yml
+```
+
+### Then re-run
+
+```bash
+for i in $(ls -1 0*.yml); do ansible-playbook $i; done
+```
+
+We are back in business in under a minute!
+
+
 ## Compatibility
 
-Tested against Ansible Automation Platform 2.0.0 and 2.0.1.
+Tested against Ansible Automation Platform 
 
-Playbooks executed from a Fedora 35 workstation with Ansible 2.9.27.
+- 2.0.0
+- 2.0.1
+- 2.2.0
+
+Playbooks tested from 
+
+- Fedora 35 with Ansible 2.9.27
+- Fedora 36 with Ansible 2.12.10
 
 ## Want a live demo from your Red Hat account team?
 

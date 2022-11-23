@@ -13,7 +13,7 @@
   tasks:
   - name: 🧨 Nuke the organization 🧨
     ansible.controller.organization:
-      name: "{{ customer }} ORGANIZATION"
+      name: "{{ customer }} ORG"
       state: absent
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
@@ -31,13 +31,13 @@
 
   - name: 🧨 Nuke the workflow 🧨
     ansible.controller.workflow_job_template:
-      name: "{{ customer }} workflow"
+      name: "{{ customer }} WORKFLOW"
       description: "Created by IAC"
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      organization: "{{ customer }} ORGANIZATION"
+      organization: "{{ customer }} ORG"
       state: absent
 
   - name: 🧨 Nuke the jobs 🧨
@@ -46,21 +46,9 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      name: "{{ customer }} JOB 1"
+      name: "{{ customer }} JOB {{ item }}"
       state: absent
-  - name: 🧨 Nuke the jobs 🧨
-    ansible.controller.job_template:
-      controller_host: "{{ aap2_host }}"
-      controller_username: "{{ aap2_username }}"
-      controller_password: "{{ aap2_password }}"
-      validate_certs: False
-      name: "{{ customer }} JOB 2"
-      state: absent
-  - name: 🧨 Nuke the jobs 🧨
-    ansible.controller.job_template:
-      controller_host: "{{ aap2_host }}"
-      controller_username: "{{ aap2_username }}"
-      controller_password: "{{ aap2_password }}"
-      validate_certs: False
-      name: "{{ customer }} JOB 3"
-      state: absent
+    loop:
+    - "1"
+    - "2"
+    - "3"
