@@ -29,7 +29,7 @@ In this demo, we will use simple Ansible playbooks taking advantage of the `Ansi
 - create a new organization
 - create a project
 - create an inventory containing one RHEL machine
-- create SSH credentials to manage your RHEL machine (for the sake of the demo, we intentionally didn't vault the password!)
+- create SSH credentials to manage your RHEL machine (password is stored in vault under `root_password`)
 - create three jobs
 - create a workflow including those jobs with a decision tree (success/fail)
 - launch the workflow
@@ -60,6 +60,8 @@ ansible-vault create vault.yml
 aap2_host: my.aap2.example.com
 aap2_username: your-user
 aap2_password: your-password
+
+root_password: your_machine_password
 ```
 
 ### Store your vault password in a file
