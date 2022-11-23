@@ -1,5 +1,5 @@
 ---
-- name: Start a job
+- name: 🚀🚀🚀 Start an individual job 🚀🚀🚀
   hosts: localhost
   gather_facts: False
 
@@ -11,10 +11,10 @@
   - ansible.controller
 
   tasks:
-  - name: Job launch
+  - name: 🚀 Job launch 🚀
     ansible.controller.job_launch:
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      job_template: "{{ customer }} job"
+      job_template: "{{ customer }} JOB 1"

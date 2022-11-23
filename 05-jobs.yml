@@ -1,0 +1,60 @@
+---
+- name: Create my jobs
+  hosts: localhost
+  gather_facts: False
+
+  vars_files:
+  - vault.yml
+  - vars.yml
+
+  collections:
+  - ansible.controller
+
+  tasks:
+  - name: Create first job template
+    ansible.controller.job_template:
+      description: "Created with IAC (05-jobs.yml)"
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+      name: "{{ customer }} JOB 1"
+      organization: "{{ customer }} ORG"
+      state: present
+      project: "{{ customer }} PROJECT"
+      inventory: "{{ customer }} INVENTORY"
+      playbook: "playbook.yml"
+      credentials:
+      - "{{ customer }} root password"
+
+  - name: Create second job template
+    ansible.controller.job_template:
+      description: "Created with IAC (05-jobs.yml)"
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+      name: "{{ customer }} JOB 2"
+      organization: "{{ customer }} ORG"
+      state: present
+      project: "{{ customer }} PROJECT"
+      inventory: "{{ customer }} INVENTORY"
+      playbook: "playbook2.yml"
+      credentials:
+      - "{{ customer }} root password"
+
+  - name: Create third job template
+    ansible.controller.job_template:
+      description: "Created with IAC (05-jobs.yml)"
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+      name: "{{ customer }} JOB 3"
+      organization: "{{ customer }} ORG"
+      state: present
+      project: "{{ customer }} PROJECT"
+      inventory: "{{ customer }} INVENTORY"
+      playbook: "playbook2.yml"
+      credentials:
+      - "{{ customer }} root password"

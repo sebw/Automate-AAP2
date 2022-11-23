@@ -11,9 +11,9 @@
   - ansible.controller
 
   tasks:
-  - name: 🧨 Nuke the org 🧨
+  - name: 🧨 Nuke the organization 🧨
     ansible.controller.organization:
-      name: "{{ customer }} org"
+      name: "{{ customer }} ORGANIZATION"
       state: absent
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
@@ -22,18 +22,45 @@
 
   - name: 🧨 Nuke the project 🧨
     ansible.controller.project:
-      name: "{{ customer }} project"
+      name: "{{ customer }} PROJECT"
       state: absent
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
 
-  - name: 🧨 Nuke the job 🧨
+  - name: 🧨 Nuke the workflow 🧨
+    ansible.controller.workflow_job_template:
+      name: "{{ customer }} workflow"
+      description: "Created by IAC"
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+      organization: "{{ customer }} ORGANIZATION"
+      state: absent
+
+  - name: 🧨 Nuke the jobs 🧨
     ansible.controller.job_template:
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      name: "{{ customer }} job"
+      name: "{{ customer }} JOB 1"
+      state: absent
+  - name: 🧨 Nuke the jobs 🧨
+    ansible.controller.job_template:
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+      name: "{{ customer }} JOB 2"
+      state: absent
+  - name: 🧨 Nuke the jobs 🧨
+    ansible.controller.job_template:
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+      name: "{{ customer }} JOB 3"
       state: absent

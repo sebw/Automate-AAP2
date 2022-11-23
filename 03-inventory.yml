@@ -17,9 +17,9 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      name: "{{ customer }} inventory"
-      description: "{{ customer }} bar inventory"
-      organization: "{{ customer }} org"
+      name: "{{ customer }} INVENTORY"
+      description: "Created with IAC (03-inventory.yml)"
+      organization: "{{ customer }} ORG"
       state: present
 
   - name: Add a host to the new inventory
@@ -28,7 +28,7 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      inventory: "{{ customer }} inventory"
+      inventory: "{{ customer }} INVENTORY"
       state: present
       name: localhost
       variables:
