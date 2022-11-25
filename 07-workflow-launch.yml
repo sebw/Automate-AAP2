@@ -18,4 +18,4 @@
       controller_password: "{{ aap2_password }}"
       validate_certs: False
       name: "{{ customer }} WORKFLOW"
-      extra_vars: {'my_var': 'This is a workflow'}
+      extra_vars: {'expected_result': 'fail'}

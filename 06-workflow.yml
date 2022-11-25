@@ -23,7 +23,7 @@
       state: present
       inventory: "{{ customer }} INVENTORY"
       ask_variables_on_launch: true
-      extra_vars: {'my_var': 'This is my workflow default value', 'key': 'value', 'key2': {'subkey': 'subvalue'}}
+      extra_vars: {'expected_result': 'succeed', 'key': 'value', 'key2': {'subkey': 'subvalue'}}
       schema:
       - identifier: job1
         unified_job_template:

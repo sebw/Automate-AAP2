@@ -23,11 +23,11 @@
       state: present
       project: "{{ customer }} PROJECT"
       inventory: "{{ customer }} INVENTORY"
-      playbook: "playbook.yml"
+      playbook: "sample_playbooks/job1.yml"
       credentials:
       - "{{ customer }} root password"
       ask_extra_vars: true
-      extra_vars: {'my_var': 'This is the job default value'}
+      extra_vars: {'expected_result': 'succeed'}
 
   - name: Create second job template
     ansible.controller.job_template:
@@ -41,7 +41,7 @@
       state: present
       project: "{{ customer }} PROJECT"
       inventory: "{{ customer }} INVENTORY"
-      playbook: "playbook2.yml"
+      playbook: "sample_playbooks/job2.yml"
       credentials:
       - "{{ customer }} root password"
 
@@ -57,6 +57,6 @@
       state: present
       project: "{{ customer }} PROJECT"
       inventory: "{{ customer }} INVENTORY"
-      playbook: "playbook2.yml"
+      playbook: "sample_playbooks/job3.yml"
       credentials:
       - "{{ customer }} root password"
