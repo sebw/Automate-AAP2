@@ -1,5 +1,5 @@
 ---
-- name: 🚀🚀🚀 Start my workflow 🚀🚀🚀
+- name: 🚀🚀🚀 Start my workflow twice 🚀🚀🚀
   hosts: localhost
   gather_facts: False
 
