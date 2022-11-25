@@ -11,7 +11,7 @@
   - ansible.controller
 
   tasks:
-  - name: 🚀 Workflow launch and fail on purpose  🚀
+  - name: 🚀 Workflow launch and fail on purpose (and ignore the error) 🚀
     ansible.controller.workflow_launch:
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
@@ -29,4 +29,3 @@
       validate_certs: False
       name: "{{ customer }} WORKFLOW"
       extra_vars: {'expected_result': 'succeed'}
-    ignore_errors: true
