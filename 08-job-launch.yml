@@ -18,4 +18,8 @@
       controller_password: "{{ aap2_password }}"
       validate_certs: False
       job_template: "{{ customer }} JOB 1"
-      extra_vars: {'job1_result': 'succeed'}
+      extra_vars: {'job1_result': 'succeed!'}
+    register: output
+
+  - debug:
+      msg: "You can check the job logs at https://{{ aap2_host }}/#/jobs/playbook/{{ output.id }}"
