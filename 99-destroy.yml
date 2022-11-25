@@ -28,7 +28,6 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      organization: "{{ customer }} ORG"
       state: absent
 
   - name: 🧨 Nuke the jobs 🧨
