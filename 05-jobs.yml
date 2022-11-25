@@ -27,7 +27,7 @@
       credentials:
       - "{{ customer }} root password"
       ask_extra_vars: true
-      extra_vars: {'expected_result': 'succeed'}
+      extra_vars: {'job1_result': 'succeed'}
 
   - name: Create second job template
     ansible.controller.job_template:
