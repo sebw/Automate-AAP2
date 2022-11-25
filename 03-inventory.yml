@@ -33,3 +33,4 @@
       name: localhost
       variables:
         example: 123
+        ansible_connection: local
