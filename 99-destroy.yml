@@ -23,21 +23,21 @@
   - name: 🧨 Nuke the workflow 🧨
     ansible.controller.workflow_job_template:
       name: "{{ customer }} WORKFLOW"
-      description: "Created by IAC"
+      state: absent
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      state: absent
+
 
   - name: 🧨 Nuke the jobs 🧨
     ansible.controller.job_template:
+      name: "{{ customer }} JOB {{ item }}"
+      state: absent
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      name: "{{ customer }} JOB {{ item }}"
-      state: absent
     loop:
     - "1"
     - "2"
