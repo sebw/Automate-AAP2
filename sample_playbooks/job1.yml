@@ -1,0 +1,12 @@
+---
+- name: Simple task
+  hosts: all
+
+  gather_facts: false
+
+  tasks:
+  - debug:
+      msg: Hello. {{ my_var }}
+
+  - fail:
+    when: expected_result == "fail"
