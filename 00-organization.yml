@@ -19,4 +19,4 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      description: "Created with IAC (01-organization.yml)"
+      description: "Created with IAC (00-organization.yml)"

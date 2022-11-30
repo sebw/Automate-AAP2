@@ -1,0 +1,36 @@
+---
+- name: Create users and teams
+  hosts: localhost
+  gather_facts: False
+
+  vars_files:
+  - vault.yml
+  - vars.yml
+
+  collections:
+  - ansible.controller
+
+  tasks:
+  - name: Making sure the teams exist
+    ansible.controller.team:
+      name: team1
+      description: "Created with IAC (01-user-team.yml)"
+      state: present
+      organization: "{{ customer }} ORG"
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+
+  - name: Making sure the users exist
+    ansible.controller.user:
+      username: user1
+      password: "{{ user1_password }}"
+      email: swains@redhat.com
+      first_name: Sebastien
+      last_name: Wains
+      state: present
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
