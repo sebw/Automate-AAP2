@@ -11,6 +11,15 @@
   - ansible.controller
 
   tasks:
+  - name: 🧨 Eliminate user 🧨
+    ansible.controller.user:
+      username: "user1"
+      state: absent
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+
   - name: 🧨 Nuke the project 🧨
     ansible.controller.project:
       name: "{{ customer }} PROJECT"
@@ -43,7 +52,7 @@
     - "2"
     - "3"
 
-  - name: 🧨 Nuke the organization 🧨
+  - name: 🧨 Nuke the organization and drag the team with it 🧨
     ansible.controller.organization:
       name: "{{ customer }} ORG"
       state: absent
