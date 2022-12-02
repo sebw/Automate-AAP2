@@ -41,6 +41,7 @@ no_endpoint_for_module = [
     'workflow_template',
     'ad_hoc_command_wait',
     'ad_hoc_command_cancel',
+    'subscriptions',  # Subscription deals with config/subscriptions
 ]
 
 # Global module parameters we can ignore
@@ -61,7 +62,7 @@ no_api_parameter_ok = {
     # lookup_organization is for specifiying the organization for the unified job template lookup
     'workflow_job_template_node': ['organization', 'approval_node', 'lookup_organization'],
     # Survey is how we handle associations
-    'workflow_job_template': ['survey_spec', 'destroy_current_schema'],
+    'workflow_job_template': ['survey_spec', 'destroy_current_nodes'],
     # organization is how we lookup unified job templates
     'schedule': ['organization'],
     # ad hoc commands support interval and timeout since its more like job_launch
@@ -77,7 +78,7 @@ no_api_parameter_ok = {
 # When this tool was created we were not feature complete. Adding something in here indicates a module
 # that needs to be developed. If the module is found on the file system it will auto-detect that the
 # work is being done and will bypass this check. At some point this module should be removed from this list.
-needs_development = ['inventory_script']
+needs_development = ['inventory_script', 'instance']
 needs_param_development = {
     'host': ['instance_id'],
     'workflow_approval': ['description', 'execution_environment'],
