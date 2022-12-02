@@ -59,10 +59,12 @@ ansible-vault create vault.yml
 
 ```yaml
 aap2_host: my.aap2.example.com
-aap2_username: your-user
-aap2_password: your-password
+aap2_username: your_aap_user
+aap2_password: your_aap_password
 
 root_password: your_machine_password
+
+user1_password: very_complex
 ```
 
 ### Store your vault password in a file
