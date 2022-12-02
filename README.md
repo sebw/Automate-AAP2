@@ -27,6 +27,7 @@ That's right, you need to automate your automation platform! Let's embrace infra
 In this demo, we will use simple Ansible playbooks taking advantage of the `Ansible Controller` collection to automate your day 2 operations:
 
 - create a new organization
+- create a user and a team (not really needed when integrating with external directories such as Active Directory)
 - create a project
 - create an inventory containing one RHEL machine
 - create SSH credentials to manage your RHEL machine (password is stored in vault under `root_password`)
