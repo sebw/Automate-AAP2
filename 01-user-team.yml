@@ -34,3 +34,14 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
+      
+  - name: Add user1 in team1
+    role:
+      user: user1
+      target_team: team1
+      role: member
+      state: present
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
