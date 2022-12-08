@@ -21,10 +21,11 @@
       extra_vars: {'job1_result': 'succeed'}
     register: output1
 
-  - debug:
+  - name: Show URL
+    debug:
       msg: "You can check the workflow logs at https://{{ aap2_host }}/#/jobs/workflow/{{ output1.id }}"
 
-  - name: 🚀 Workflow launch with remediation 🚀
+  - name: 🚀 Workflow launch with approval required to run remediation 🚀
     ansible.controller.workflow_launch:
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
@@ -34,5 +35,6 @@
       extra_vars: {'job1_result': 'fail'}
     register: output2
 
-  - debug:
+  - name: Show URL
+    debug:
       msg: "You can check the workflow logs at https://{{ aap2_host }}/#/jobs/workflow/{{ output2.id }}"

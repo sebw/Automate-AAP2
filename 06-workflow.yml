@@ -35,9 +35,7 @@
           success_nodes:
             - identifier: job2
           failure_nodes:
-            - identifier: job3
-          always_nodes: []
-          credentials: []
+            - identifier: approval1
       - identifier: job2
         unified_job_template:
           organization:
@@ -51,8 +49,16 @@
             name: "{{ customer }} ORG"
           name: "{{ customer }} JOB 3"
           type: job_template
+      - identifier: approval1
+        all_parents_must_converge: false
+        unified_job_template:
+          organization:
+            name: "{{ customer }} ORG"
+          name: "{{ customer }} APPROVAL 1"
+          type: workflow_approval
+          timeout: 120
         related:
-          success_nodes: []
-          failure_nodes: []
-          always_nodes: []
-          credentials: []
+          success_nodes:
+            - identifier: job3
+
+
