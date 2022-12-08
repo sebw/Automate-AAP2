@@ -19,13 +19,14 @@
       validate_certs: False
       name: "{{ customer }} WORKFLOW"
       extra_vars: {'job1_result': 'succeed'}
+      wait: yes
     register: output1
 
   - name: Show URL
     debug:
       msg: "You can check the workflow logs at https://{{ aap2_host }}/#/jobs/workflow/{{ output1.id }}"
 
-  - name: 🚀 Workflow launch with approval required to run remediation 🚀
+  - name: 🚀 Workflow launch with approval 👍👎 required to run remediation 🚀
     ansible.controller.workflow_launch:
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
@@ -33,8 +34,13 @@
       validate_certs: False
       name: "{{ customer }} WORKFLOW"
       extra_vars: {'job1_result': 'fail'}
+      wait: no
     register: output2
 
   - name: Show URL
     debug:
-      msg: "You can check the workflow logs at https://{{ aap2_host }}/#/jobs/workflow/{{ output2.id }}"
+      msg: You can check the workflow logs at https://{{ aap2_host }}/#/jobs/workflow/{{ output2.id }}
+
+  - name: Show approval link
+    debug:
+      msg: An approval is waiting for you at https://{{ aap2_host }}/#/workflow_approvals?workflow_approvals.status=pending
