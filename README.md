@@ -14,7 +14,7 @@ It's so easy it's tempting to get started fast and to create jobs and all kind o
 
 But as your automation footprint grows, the few clicks become a large amount of clicks. You might also end up wondering if a job is still really needed or not. Who owns it anyway?
 
-As any platform you need governance (who can do what and when):
+As any platform you need governance, with best practices such as:
 
 - a solid RBAC model (which AAP has)
 - a scalable and flexible platform (which AAP is)
@@ -32,8 +32,8 @@ In this demo, we will use simple Ansible playbooks taking advantage of the `Ansi
 - create an inventory containing one RHEL machine
 - create SSH credentials to manage your RHEL machine (password is stored in vault under `root_password`)
 - create three jobs
-- create a workflow including those jobs with a decision tree (success/fail)
-- launch the workflow
+- create a workflow including those jobs with a decision tree (success/fail) and an approval required to run remediation if previous job failed
+- launch the workflow twice: simulate a fully working workflow and simulate a workflow that fails and require approval to run remediation
 - launch an individual job
 
 Now that you are doing infrastructure as code, in case of disaster, you might not even need to restore any backup. You just need to re-run those playbooks to rebuild your infrastructure!
@@ -98,11 +98,13 @@ The order of execution of playbooks is important, this is the reason why they ar
 - jobs
 - workflow
 
-If you check under "Jobs" you should see a workflow and related jobs running.
+If you check under "Jobs" you should see workflows and related jobs running.
+
+You would also find an approval pending for a workflow! (see the bell icon in the upper right corner)
 
 ## Simulate a disaster and recover from it
 
-Want to simulate a disaster? 🧨
+Want to simulate a disaster in your platform? 🧨
 
 ### Just run
 
