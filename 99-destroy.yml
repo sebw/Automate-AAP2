@@ -13,7 +13,7 @@
   tasks:
   - name: 🧨 Eliminate user 🧨
     ansible.controller.user:
-      username: "user1"
+      username: "{{ customer }}_user1"
       state: absent
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"

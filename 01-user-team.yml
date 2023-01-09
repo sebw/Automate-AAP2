@@ -13,7 +13,7 @@
   tasks:
   - name: Making sure the teams exist
     ansible.controller.team:
-      name: team1
+      name: "{{ customer }}_team1"
       description: "Created with IAC (01-user-team.yml)"
       state: present
       organization: "{{ customer }} ORG"
@@ -24,7 +24,7 @@
 
   - name: Making sure the users exist
     ansible.controller.user:
-      username: user1
+      username: "{{ customer }}_user1"
       password: "{{ user1_password }}"
       email: swains@redhat.com
       first_name: Sebastien
@@ -37,8 +37,8 @@
       
   - name: Add user1 in team1
     role:
-      user: user1
-      target_team: team1
+      user: "{{ customer }}_user1"
+      target_team: "{{ customer }}_team1"
       role: member
       state: present
       controller_host: "{{ aap2_host }}"
