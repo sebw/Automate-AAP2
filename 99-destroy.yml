@@ -1,5 +1,5 @@
 ---
-- name: 💥💥💥 Simulate a disaster! 💥💥💥
+- name: 💥💥💥 Simulate a disaster at {{ customer }}! 💥💥💥
   hosts: localhost
   gather_facts: False
 
