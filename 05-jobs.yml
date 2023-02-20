@@ -60,3 +60,15 @@
       playbook: "sample_job3.yml"
       credentials:
       - "{{ customer }} root password"
+
+  - name: Allow regular user to execute a job template
+    ansible.controller.role:
+      user: "{{ customer }}_user1"
+      role: execute
+      job_templates:
+        - "{{ customer }} JOB 3"
+      state: present
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
