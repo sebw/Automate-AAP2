@@ -25,31 +25,31 @@
       ask_variables_on_launch: true
       extra_vars: {'job1_result': 'succeed', 'key': 'value', 'key2': {'subkey': 'subvalue'}}
       schema:
-      - identifier: job1
+      - identifier: provisioning
         unified_job_template:
           organization:
             name: "{{ customer }} ORG"
-          name: "{{ customer }} JOB 1"
+          name: "{{ customer }} provisioning"
           type: job_template
         related:
           success_nodes:
-            - identifier: job2
+            - identifier: post-provisioning
           failure_nodes:
-            - identifier: approval1
-      - identifier: job2
+            - identifier: approval
+      - identifier: post-provisioning
         unified_job_template:
           organization:
             name: "{{ customer }} ORG"
-          name: "{{ customer }} JOB 2"
+          name: "{{ customer }} post provisioning"
           type: job_template
-      - identifier: job3
+      - identifier: remediation
         all_parents_must_converge: false
         unified_job_template:
           organization:
             name: "{{ customer }} ORG"
-          name: "{{ customer }} JOB 3"
+          name: "{{ customer }} remediation"
           type: job_template
-      - identifier: approval1
+      - identifier: approval
         all_parents_must_converge: false
         unified_job_template:
           organization:
@@ -59,6 +59,6 @@
           timeout: 120
         related:
           success_nodes:
-            - identifier: job3
+            - identifier: remediation
 
 

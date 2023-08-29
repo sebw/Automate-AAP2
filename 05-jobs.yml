@@ -18,7 +18,7 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      name: "{{ customer }} JOB 1"
+      name: "{{ customer }} provisioning"
       organization: "{{ customer }} ORG"
       state: present
       project: "{{ customer }} PROJECT"
@@ -36,7 +36,7 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      name: "{{ customer }} JOB 2"
+      name: "{{ customer }} post provisioning"
       organization: "{{ customer }} ORG"
       state: present
       project: "{{ customer }} PROJECT"
@@ -52,7 +52,7 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      name: "{{ customer }} JOB 3"
+      name: "{{ customer }} remediation"
       organization: "{{ customer }} ORG"
       state: present
       project: "{{ customer }} PROJECT"
@@ -66,7 +66,7 @@
       user: "{{ customer }}_user1"
       role: execute
       job_templates:
-        - "{{ customer }} JOB 3"
+        - "{{ customer }} remediation"
       state: present
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
