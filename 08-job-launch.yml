@@ -17,7 +17,7 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
-      job_template: "{{ customer }} JOB 1"
+      job_template: "{{ customer }} provisioning"
       extra_vars: {'job1_result': 'succeed!'}
     register: output
 

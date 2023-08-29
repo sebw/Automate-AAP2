@@ -41,16 +41,16 @@
 
   - name: 🧨 Nuke the jobs 🧨
     ansible.controller.job_template:
-      name: "{{ customer }} JOB {{ item }}"
+      name: "{{ customer }} {{ item }}"
       state: absent
       controller_host: "{{ aap2_host }}"
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
     loop:
-    - "1"
-    - "2"
-    - "3"
+    - "post provisioning"
+    - "provisioning"
+    - "remediation"
 
   - name: 🧨 Nuke the organization and drag the team with it 🧨
     ansible.controller.organization:
