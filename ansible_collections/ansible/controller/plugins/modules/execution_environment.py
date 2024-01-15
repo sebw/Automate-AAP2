@@ -80,10 +80,11 @@ def main():
         name=dict(required=True),
         new_name=dict(),
         image=dict(required=True),
-        description=dict(default=''),
+        description=dict(),
         organization=dict(),
-        credential=dict(default=''),
+        credential=dict(),
         state=dict(choices=['present', 'absent'], default='present'),
+        # NOTE: Default for pull differs from API (which is blank by default)
         pull=dict(choices=['always', 'missing', 'never'], default='missing'),
     )
 

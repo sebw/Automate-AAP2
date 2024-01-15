@@ -60,7 +60,7 @@
    "name": "meta/runtime.yml",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "98c4afe20fe33316e09583c7302f30a831948bbb2f57a741349051e6a37b1a71",
+   "chksum_sha256": "4f932d1a018d02e206ceaf181b5365aaa46aeaeb34314ba9ee7cbb4bd66367e1",
    "format": 1
   },
   {
@@ -109,7 +109,7 @@
    "name": "plugins/inventory/controller.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "890b02512f6d2f540852faf333b4d25a9eb522acf23dca0d74f81a69f8dcfde5",
+   "chksum_sha256": "d10364019437383a66e632132679fce22242651e398ac9ec96c61cf5237bcb92",
    "format": 1
   },
   {
@@ -123,21 +123,21 @@
    "name": "plugins/lookup/controller_api.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "6a6d0368156275dedddab9b245b1779076e21c1406d3e49a4ea400f666184660",
+   "chksum_sha256": "8ea212d607467dfee0fe1c6c07b834536ecd66e3acb809ad8f760a0acdd6f881",
    "format": 1
   },
   {
    "name": "plugins/lookup/schedule_rrule.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "5c76c6bc1a4b66754d31edaf4f79ac1d55a952fe3c54482934e6a462cc0bd62d",
+   "chksum_sha256": "c3ec7b8f134eca3a9f04156213b584792fc4e3397e3b9f82b5044e9ec662c7a2",
    "format": 1
   },
   {
    "name": "plugins/lookup/schedule_rruleset.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "b268f0d40f0a39e476df35343f9399f22a234c51fbf37ff31a84f9338e457a7b",
+   "chksum_sha256": "be96c1d747f985ea531835277bd751af13e109f326413a45fd5c5cc1093c7414",
    "format": 1
   },
   {
@@ -158,7 +158,7 @@
    "name": "plugins/module_utils/controller_api.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "1f747af7605237db4c01db836e9f9955543e7493532cbb81a0ec8f8707e4ff6d",
+   "chksum_sha256": "22736f6bdeb78c4e0f9b9834bb762f96efbc5691361611d90868b981f5c2a8fd",
    "format": 1
   },
   {
@@ -186,14 +186,14 @@
    "name": "plugins/modules/ad_hoc_command.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "5eb61f6ac42c013445048f12bb6268edd58d8408e69a0756501268928a3e81c7",
+   "chksum_sha256": "ac4b735e4733d6b3aab027e2080d2e9f79d54ce5454e5cdd7d708d471088efed",
    "format": 1
   },
   {
    "name": "plugins/modules/ad_hoc_command_cancel.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "79f4b4b06ebb4e370b951c0b37b4c0d992cad7bdfa1eac6236fb0f5223f6ef4e",
+   "chksum_sha256": "87a2bc30b3dcec431ff731d54f50a51b5caa6e210840a2db72057beb5c72271a",
    "format": 1
   },
   {
@@ -211,6 +211,20 @@
    "format": 1
   },
   {
+   "name": "plugins/modules/bulk_host_create.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8255eed80af5378acd8b285c117a456451fb1eaec9bfb1579667a50e1a8e4ea7",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/bulk_job_launch.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d2031bdabbfd6aaea48a11128d621376fda98fbdc0d7842ae1ffac5c13c6dd61",
+   "format": 1
+  },
+  {
    "name": "plugins/modules/controller_meta.py",
    "ftype": "file",
    "chksum_type": "sha256",
@@ -221,7 +235,7 @@
    "name": "plugins/modules/credential.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "09313f51d91fba901a13614c8085e108c009a42c215d673633a104d4c0c08cd6",
+   "chksum_sha256": "cb66910826eca51c62fef68e3dc2b750dffc359cdcf4b822e9765d13f7332174",
    "format": 1
   },
   {
@@ -242,28 +256,28 @@
    "name": "plugins/modules/execution_environment.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "6b9172b360b32396db7184a4b4be12723d6854951d83f1f106258706d9eae9e5",
+   "chksum_sha256": "c8022ab5ce785fb26b49f7f53ccd6d1d07f662656e4265a4774734e82ad7f73f",
    "format": 1
   },
   {
    "name": "plugins/modules/export.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "cc56917dbcfa30108336ff877e7ffc16ff593a113fb5e491098d0aff8747db0d",
+   "chksum_sha256": "e0927e621761b490b3c5531f376e79321b936da92ad0ecad0d509cb8172d4225",
    "format": 1
   },
   {
    "name": "plugins/modules/group.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "25e14d2e09dba2e7eb5a5c9666a47adda4317e03204511a3ed572850eb9fbcad",
+   "chksum_sha256": "85203103ea4445aac3993613205b8a540277aa5b3480536cfaf7fbb91c8c82fe",
    "format": 1
   },
   {
    "name": "plugins/modules/host.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "412124d388d452a743d48c472aceb9782e433b5302b32735b5976ddbfce3732e",
+   "chksum_sha256": "d445c1cc36467a898c58d3c5ffeeaf25e035bb65f0b47eff6a0ee35f659ee892",
    "format": 1
   },
   {
@@ -284,28 +298,28 @@
    "name": "plugins/modules/instance_group.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "1e407a18abea755ba5dfd85eee184cc9a56584980634ca334caa3581e4a49c93",
+   "chksum_sha256": "522f19732ffc25bf4da546ae4a32f8505ba60e168f839cf09a1dce46c6eedd5d",
    "format": 1
   },
   {
    "name": "plugins/modules/inventory.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "8252956415f392f1f620d33df942739aff2828f3c13b18a64c2c5649a53bca3c",
+   "chksum_sha256": "6d559c0cba794418cbeba8ffef5ad18d59950dc97c5239309b345538ea2135b2",
    "format": 1
   },
   {
    "name": "plugins/modules/inventory_source.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "2748c51ca6ff115e51bc5e5d9cd1df4161704976a56a7ebee57f0ea329a5a689",
+   "chksum_sha256": "7772201d5f8c8dad680dd39b074c03099c2871b244bf904d8bcd77818f8aaa2f",
    "format": 1
   },
   {
    "name": "plugins/modules/inventory_source_update.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "115f44ce01976a23e7b043d8d0d9996f99e4326c5b23d8e2a6decb5332be5242",
+   "chksum_sha256": "389c0d49bb1a7842cb5118beed97938695d7a83007fb6ddf602c3d4a5a6ccfb9",
    "format": 1
   },
   {
@@ -319,7 +333,7 @@
    "name": "plugins/modules/job_launch.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "041dfdf7a46f272cabb8a3349a3719cc90d222ab082e631c5bc47e520dcb6782",
+   "chksum_sha256": "a92714acb5b26f04d94e724a5dcd16bb0f1e84c798c93d4e1c1660a20e154bdf",
    "format": 1
   },
   {
@@ -333,7 +347,7 @@
    "name": "plugins/modules/job_template.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "4cbcad10c60bc788eab7771e6c29a40b2bc6a62ab4775d7e55c0005e082d3c8d",
+   "chksum_sha256": "56bf93daaf977657b3f6ce6770e96003dd19ce1867ef8736dcedbab73871d518",
    "format": 1
   },
   {
@@ -368,35 +382,35 @@
    "name": "plugins/modules/organization.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "973ae54ab52eccaef73cb1a6f13b3860c4301d481db1f0df098588a1f59e7b44",
+   "chksum_sha256": "562b03807f0651dcc6ace87edf96b660b5cabf45b296203910e2114cde69bb69",
    "format": 1
   },
   {
    "name": "plugins/modules/project.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "f1d1ad62010b0e1125a916dca9cb9ba053c3a4a0b72b075572ef806d047385e1",
+   "chksum_sha256": "055d22d79d30b4bee0efe4707c069d630ae86518cbe9460ea13cbdfa6843a756",
    "format": 1
   },
   {
    "name": "plugins/modules/project_update.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "3338e602d5a30576798abfd2d5709eddb77961a2e375d15f66d7fe78f577742d",
+   "chksum_sha256": "1e3813db8b46dd30dc3a40270625e8847eabf8e94a5347e619b16fbb9b5bfd10",
    "format": 1
   },
   {
    "name": "plugins/modules/role.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "aeba9b2004e588e55984beff24d8bc84361fbcc635521c8bd064b0170830d426",
+   "chksum_sha256": "ded55f120c86240e61d68a5c7df520f54063778a81314ad4c3012d1fc5ce07f3",
    "format": 1
   },
   {
    "name": "plugins/modules/schedule.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "517a13e11e8ea5a2bd18e41b933f17e5cfbe611b44f57b7b4cf119091b91fe71",
+   "chksum_sha256": "b797d6f73d8cf603383b876b736df598c42d50d7e3594ee67df49ea337ec3e06",
    "format": 1
   },
   {
@@ -410,7 +424,7 @@
    "name": "plugins/modules/subscriptions.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "f2338470b000fe5a6260214102bde5f6cd7188a217f18e04667e7b6e26c92e8d",
+   "chksum_sha256": "5a81ec66c10ffd83ce19f411878c5200be56aa98ee598a3f8dd93344d8469f37",
    "format": 1
   },
   {
@@ -424,322 +438,49 @@
    "name": "plugins/modules/token.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "52d0f54df7421a1e5b3bc2f28f0a085c2fe69dfdd941566f1242a44cd4fc94a3",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_ad_hoc_command.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "5eb61f6ac42c013445048f12bb6268edd58d8408e69a0756501268928a3e81c7",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_ad_hoc_command_cancel.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "79f4b4b06ebb4e370b951c0b37b4c0d992cad7bdfa1eac6236fb0f5223f6ef4e",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_ad_hoc_command_wait.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "58ee12d944965122225be5f9550206f63052235e101e710bb1bb5bde414a325f",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_application.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "ca5f37aefef0703f821a9f68252040d08b0eee4b175c024cf95e9040e9c9f2be",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_controller_meta.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "4efd568369daa6bd8aef39a5b774b83faf58dd80553d124101fbe44ce3737543",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_credential.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "09313f51d91fba901a13614c8085e108c009a42c215d673633a104d4c0c08cd6",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_credential_input_source.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "f6c205abaa76971c278b5566c10b2b9fa31e5e963a17936b9ef58fd79373c453",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_credential_type.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "6493c8cd07a6402f7f6cd4a4ed54a90985f218e68e618bf49d8c510fcf2f6d16",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_execution_environment.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "6b9172b360b32396db7184a4b4be12723d6854951d83f1f106258706d9eae9e5",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_export.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "cc56917dbcfa30108336ff877e7ffc16ff593a113fb5e491098d0aff8747db0d",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_group.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "25e14d2e09dba2e7eb5a5c9666a47adda4317e03204511a3ed572850eb9fbcad",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_host.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "412124d388d452a743d48c472aceb9782e433b5302b32735b5976ddbfce3732e",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_import.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "69fae39b2beb52a18278fe361946fd1e7449c14b65c1fe3dce030d2319c4ead2",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_instance_group.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "1e407a18abea755ba5dfd85eee184cc9a56584980634ca334caa3581e4a49c93",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_inventory.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "8252956415f392f1f620d33df942739aff2828f3c13b18a64c2c5649a53bca3c",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_inventory_source.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "2748c51ca6ff115e51bc5e5d9cd1df4161704976a56a7ebee57f0ea329a5a689",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_inventory_source_update.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "115f44ce01976a23e7b043d8d0d9996f99e4326c5b23d8e2a6decb5332be5242",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_job_cancel.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "16135c9aad2a93d574136c9dee650dcc8982341c5a034a8a58d41561ff5f3543",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_job_launch.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "041dfdf7a46f272cabb8a3349a3719cc90d222ab082e631c5bc47e520dcb6782",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_job_list.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "05a14841d6bd163909ce4861d64feafd60d9e3474e5501d7e204c3c07e830873",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_job_template.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "4cbcad10c60bc788eab7771e6c29a40b2bc6a62ab4775d7e55c0005e082d3c8d",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_job_wait.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "522050ce9267de5d615a9672cab399f0bb1a43fc52eaad50b6d958bd9d07b7de",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_label.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "c93898037ce2f2cfc94b4a5b346b29aed633d249aa97dd58f3aeb8b337544de8",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_license.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "6e675df5e4cbf3cf92ee4a0d86d888172979546560a6a43f6af5cff5dce23e14",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_notification_template.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "45c57ffbf44165ef1d0f67f8dcc86c6aba9893a7d91f5b7f079cd93088fcf527",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_organization.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "973ae54ab52eccaef73cb1a6f13b3860c4301d481db1f0df098588a1f59e7b44",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_project.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "f1d1ad62010b0e1125a916dca9cb9ba053c3a4a0b72b075572ef806d047385e1",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_project_update.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "3338e602d5a30576798abfd2d5709eddb77961a2e375d15f66d7fe78f577742d",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_role.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "aeba9b2004e588e55984beff24d8bc84361fbcc635521c8bd064b0170830d426",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_schedule.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "517a13e11e8ea5a2bd18e41b933f17e5cfbe611b44f57b7b4cf119091b91fe71",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_settings.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "8b019a1b25116312062f9d034d5b5ae225f725529411328c750dc2e57b1c7d84",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_team.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "501f54a73e6053cb5be0ee43a36d63be4cab3dc359d5fccf6825b4c861b10037",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_token.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "52d0f54df7421a1e5b3bc2f28f0a085c2fe69dfdd941566f1242a44cd4fc94a3",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_user.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "540a0b28a05931d76dab09bee44e3ec622bca6b590c2764a23d1d4a096e48240",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_workflow_approval.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "0062f4eb714a162f5cdff9e969ab6c9fa718c72a4dfd471ac4da611ae2cd4168",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_workflow_job_template.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "5a8badeeb5ad896e38c577c7d0ac8c8b9ef0faa333bf0f6909108a7c97c01efe",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_workflow_job_template_node.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "c306fb10a0a28a09054058cc4a93f03c21341813ae0be5279da3c49cb7712bed",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_workflow_launch.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "5147d5d4c4c817cd4201f3f945f9dbbb75a80488a6ac16e19ad65e75174f4460",
-   "format": 1
-  },
-  {
-   "name": "plugins/modules/tower_workflow_node_wait.py",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "30e43f8a270e36b72b18b146bd3471c80fc46a289c7e43f12ab81dfa1f8a9fb4",
+   "chksum_sha256": "7874f463bc33c6137ff910d8334a1fe69bdbf7a7b9f90e49e4bcbce72c89fd3a",
    "format": 1
   },
   {
    "name": "plugins/modules/user.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "540a0b28a05931d76dab09bee44e3ec622bca6b590c2764a23d1d4a096e48240",
+   "chksum_sha256": "091481dcefdd63ff0cb0a952d30d4575f03c9272e50bdf473e4be9ab9060d7bf",
    "format": 1
   },
   {
    "name": "plugins/modules/workflow_approval.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "0062f4eb714a162f5cdff9e969ab6c9fa718c72a4dfd471ac4da611ae2cd4168",
+   "chksum_sha256": "7091533676b19945550aef769728c5f0523deacaca7a01cb6423585842d5f80c",
    "format": 1
   },
   {
    "name": "plugins/modules/workflow_job_template.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "5a8badeeb5ad896e38c577c7d0ac8c8b9ef0faa333bf0f6909108a7c97c01efe",
+   "chksum_sha256": "9e1cb2d3ff10ef3f69050553b2fc4cf9671a1491e5336f4c6fe6ff01485730b7",
    "format": 1
   },
   {
    "name": "plugins/modules/workflow_job_template_node.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "c306fb10a0a28a09054058cc4a93f03c21341813ae0be5279da3c49cb7712bed",
+   "chksum_sha256": "df2ba66a99b1814846ec46202256a7ed2a1661c3773cc167489610be962c3d2e",
    "format": 1
   },
   {
    "name": "plugins/modules/workflow_launch.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "5147d5d4c4c817cd4201f3f945f9dbbb75a80488a6ac16e19ad65e75174f4460",
+   "chksum_sha256": "4ce41ea45bfd40b1895f34e6a48240993444e3b229bbe9ff3a9f9805075722cc",
    "format": 1
   },
   {
    "name": "plugins/modules/workflow_node_wait.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "30e43f8a270e36b72b18b146bd3471c80fc46a289c7e43f12ab81dfa1f8a9fb4",
+   "chksum_sha256": "f27f91ec20dc5aae504239f794bf68ba07321e7c54062bea2ce9a9f26639dcb9",
    "format": 1
   },
   {
@@ -767,7 +508,7 @@
    "name": "test/awx/conftest.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "4c2ac05f4e9b038f336acb6d082efdd9307c7414fedc6f055d56e17499d58c58",
+   "chksum_sha256": "09e6eaaa58debfcd70ebd6fd92baafd2fea879b59c60f4cfa8c866ae04977a4d",
    "format": 1
   },
   {
@@ -785,10 +526,17 @@
    "format": 1
   },
   {
+   "name": "test/awx/test_bulk.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "194490a94b5d7e3444115a0ead711061cce2ac737ecbcdb786c3d673e919f837",
+   "format": 1
+  },
+  {
    "name": "test/awx/test_completeness.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "cb2846a380c9149ceafac4cc24bf1c0af874452e501613c9baacca4e0a0fa60f",
+   "chksum_sha256": "2a82c7289ebaa496000850675256a219b65b24eb8909e690d157c8b02f79a6e7",
    "format": 1
   },
   {
@@ -837,7 +585,7 @@
    "name": "test/awx/test_inventory_source.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "a0198aefe81dc46bf639e76448a8c9265a62cde2cbbae7c4ad33d831fd86f594",
+   "chksum_sha256": "a14f69db1bf6cec594e64c2963b415560b78eac1f9cbe7d4c09586b494e11bde",
    "format": 1
   },
   {
@@ -886,7 +634,7 @@
    "name": "test/awx/test_project.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "cf58721b4d21e20a0cdb5fe66c8450080e5e9222a664762582d3dd2b554b3276",
+   "chksum_sha256": "fbb93e524df51b788f12746ffb52bf5105f67b3ae6b89403bed51ed1f2da9c12",
    "format": 1
   },
   {
@@ -900,7 +648,7 @@
    "name": "test/awx/test_schedule.py",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "39fd8f82afe1c108bc460c27662a27f272a1a3746a099ad0d5566ed9384950b4",
+   "chksum_sha256": "dadfd1c19c4c828dd84128ca484b837c6a904a09e92bcee12cb7cda408562c81",
    "format": 1
   },
   {
@@ -950,6 +698,13 @@
    "ftype": "dir",
    "chksum_type": null,
    "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/config.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4cb8bf065737689916cda6a2856fcfb8bc27f49224a4b2c2fde842e3b0e76fbb",
    "format": 1
   },
   {
@@ -1051,6 +806,34 @@
    "format": 1
   },
   {
+   "name": "tests/integration/targets/bulk_host_create",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/bulk_host_create/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "39be6c097c03152ec1873732d8e09e34639464acad4f9d42ef3e13b6f87d47d1",
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/bulk_job_launch",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/bulk_job_launch/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "76a5b81caaa30a7dc5fd68048b925551a83ef2cee8a0b4c15d02f0857fbbe812",
+   "format": 1
+  },
+  {
    "name": "tests/integration/targets/credential",
    "ftype": "dir",
    "chksum_type": null,
@@ -1089,7 +872,7 @@
    "name": "tests/integration/targets/credential_input_source/tasks/main.yml",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "3e35b7229f1be070bf38bd2d768f32232905f0cb2ffc157df3234802dd728182",
+   "chksum_sha256": "ccc6e4527f9019c28f32cdb7b223d1a4445f2f505ef448e8a2e255c8981bd927",
    "format": 1
   },
   {
@@ -1180,7 +963,7 @@
    "name": "tests/integration/targets/export/tasks/main.yml",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "800c50f2f374c4e2dff5ff353777dbdcb6b0fb92eb0a304f512d88e550b42989",
+   "chksum_sha256": "e66e796b995b7c9ae612e00b393ccd75d9747d2d94ea3fbbaf90832e5b3e9e3f",
    "format": 1
   },
   {
@@ -1523,7 +1306,7 @@
    "name": "tests/integration/targets/lookup_rruleset/tasks/main.yml",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "dd1d0b2f9bab1e977dc9e10be443b8e59da7ea5d328eb04939ada9be334c9811",
+   "chksum_sha256": "508564b7524b5f807dafd028ee5af7433bb5aace1e1396a3e1afd843f3b8f274",
    "format": 1
   },
   {
@@ -1786,6 +1569,27 @@
    "format": 1
   },
   {
+   "name": "tests/integration/targets/workflow_approval",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/workflow_approval/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/integration/targets/workflow_approval/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d9891056c8e9ce1b3a2e78eebbc470979e4790bffafc3d5e4d22e90c7da4948d",
+   "format": 1
+  },
+  {
    "name": "tests/integration/targets/workflow_job_template",
    "ftype": "dir",
    "chksum_type": null,
@@ -1803,7 +1607,7 @@
    "name": "tests/integration/targets/workflow_job_template/tasks/main.yml",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "3de7be1279480a80cd5dd7f2f009108d66d303b95e7f0583670fce5ca06d811f",
+   "chksum_sha256": "5895015b1657e10bfd5960fd8f7f9b358f4d030afcd4d9f2f87506656bc1d3ba",
    "format": 1
   },
   {
@@ -1828,150 +1632,31 @@
    "format": 1
   },
   {
-   "name": "tools",
+   "name": "tests/sanity",
    "ftype": "dir",
    "chksum_type": null,
    "chksum_sha256": null,
    "format": 1
   },
   {
-   "name": "tools/generate.yml",
+   "name": "tests/sanity/ignore-2.14.txt",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "aa0d7cefef5234cf5e143c769fa537c4142d411e815dd2b2599891f137ac2347",
+   "chksum_sha256": "05b621f6ff40c091ab1c07947c43d817ed37af7acfc0f8bef7b1453eb03b3aa7",
    "format": 1
   },
   {
-   "name": "tools/roles",
-   "ftype": "dir",
-   "chksum_type": null,
-   "chksum_sha256": null,
-   "format": 1
-  },
-  {
-   "name": "tools/roles/generate",
-   "ftype": "dir",
-   "chksum_type": null,
-   "chksum_sha256": null,
-   "format": 1
-  },
-  {
-   "name": "tools/roles/generate/tasks",
-   "ftype": "dir",
-   "chksum_type": null,
-   "chksum_sha256": null,
-   "format": 1
-  },
-  {
-   "name": "tools/roles/generate/tasks/main.yml",
+   "name": "tests/sanity/ignore-2.15.txt",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "3aecc6ba819a7b18e755f80207316a9960c8a8e8ce4eeab7fee798ba91a989fb",
+   "chksum_sha256": "f6dce33e05558d94ecc8ebacc8a5011e9defc1b197fcc13c4335868b6d6c4952",
    "format": 1
   },
   {
-   "name": "tools/roles/generate/templates",
-   "ftype": "dir",
-   "chksum_type": null,
-   "chksum_sha256": null,
-   "format": 1
-  },
-  {
-   "name": "tools/roles/generate/templates/module.j2",
+   "name": "tests/sanity/ignore-2.16.txt",
    "ftype": "file",
    "chksum_type": "sha256",
-   "chksum_sha256": "5062520633ed50337c76f12723f492939da564964c16c32e31b5bd07b51bf70d",
-   "format": 1
-  },
-  {
-   "name": "tools/roles/template_galaxy",
-   "ftype": "dir",
-   "chksum_type": null,
-   "chksum_sha256": null,
-   "format": 1
-  },
-  {
-   "name": "tools/roles/template_galaxy/tasks",
-   "ftype": "dir",
-   "chksum_type": null,
-   "chksum_sha256": null,
-   "format": 1
-  },
-  {
-   "name": "tools/roles/template_galaxy/tasks/main.yml",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "4fe8ccbfff82b8545325343a74f0fb48c7add4430c0e4ff1b192cb8778fc99b3",
-   "format": 1
-  },
-  {
-   "name": "tools/roles/template_galaxy/templates",
-   "ftype": "dir",
-   "chksum_type": null,
-   "chksum_sha256": null,
-   "format": 1
-  },
-  {
-   "name": "tools/roles/template_galaxy/templates/README.md.j2",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "2cfdcc1ba4355f0bc942d91bfbca348e323834987c49866f7437238737ef7ba8",
-   "format": 1
-  },
-  {
-   "name": "tools/roles/template_galaxy/templates/galaxy.yml.j2",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "08bff81bb3e43039759b9187770929d8064dde9f27883c0eb39ae9ae9393318a",
-   "format": 1
-  },
-  {
-   "name": "tools/template_galaxy.yml",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "87328b1102cb42e5c49a439e725eef477d8013fe6a61889b3251be061c9749de",
-   "format": 1
-  },
-  {
-   "name": "tools/vars",
-   "ftype": "dir",
-   "chksum_type": null,
-   "chksum_sha256": null,
-   "format": 1
-  },
-  {
-   "name": "tools/vars/aliases.yml",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "1b7881b3f397d274bf8758f1df94b82f95dcf2438ae0288c5e59e0a92da0c47a",
-   "format": 1
-  },
-  {
-   "name": "tools/vars/associations.yml",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "ee9579815e841dba19a6054f9c3c7e855e8b43a0205d540b283d71194594e07f",
-   "format": 1
-  },
-  {
-   "name": "tools/vars/examples.yml",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "defb4bf2610f4c7daa1d7c607d450817da73a4327cb636ec0a0daa9de0c9e569",
-   "format": 1
-  },
-  {
-   "name": "tools/vars/generate_for.yml",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "2af0e6f768d2c9d05a62eb01b6dc125d1c7d3a7de7f8a7267dfc5bcd307f0773",
-   "format": 1
-  },
-  {
-   "name": "tools/vars/resolution.yml",
-   "ftype": "file",
-   "chksum_type": "sha256",
-   "chksum_sha256": "3d41044860137770497ca5a99b51b3a057874c9e10233a5b8e40f495665e973b",
+   "chksum_sha256": "f6dce33e05558d94ecc8ebacc8a5011e9defc1b197fcc13c4335868b6d6c4952",
    "format": 1
   }
  ],
