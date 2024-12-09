@@ -24,6 +24,7 @@
 
   - name: Making sure the users exist
     ansible.controller.user:
+      organization: "{{ customer }} ORG"
       username: "{{ customer }}_user1"
       password: "{{ user1_password }}"
       email: swains@redhat.com
@@ -36,9 +37,24 @@
       validate_certs: False
       
   - name: Add user1 in team1
-    role:
+    ansible.controller.role:
+      organization: "{{ customer }} ORG"
       user: "{{ customer }}_user1"
       target_team: "{{ customer }}_team1"
+      role: member
+      state: present
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+
+  - name: Associate new user to organization
+    ansible.controller.role:
+      user: "{{ customer }}_user1"
+      target_team: "{{ customer }}_team1"
+      organization: "{{ customer }} ORG"
+      organizations:
+      - "{{ customer }} ORG"
       role: member
       state: present
       controller_host: "{{ aap2_host }}"

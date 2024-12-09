@@ -31,6 +31,7 @@
       inventory: "{{ customer }} INVENTORY"
       state: present
       name: localhost
+      enabled: true
       variables:
         example: 123
         ansible_connection: local
