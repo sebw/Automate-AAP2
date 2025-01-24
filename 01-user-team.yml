@@ -11,7 +11,7 @@
   - ansible.controller
 
   tasks:
-  - name: Making sure the teams exist
+  - name: Making sure team1 exists
     ansible.controller.team:
       name: "{{ customer }}_team1"
       description: "Created with IAC (01-user-team.yml)"
@@ -22,10 +22,35 @@
       controller_password: "{{ aap2_password }}"
       validate_certs: False
 
-  - name: Making sure the users exist
+  - name: Making sure the team2 exists
+    ansible.controller.team:
+      name: "{{ customer }}_team2"
+      description: "Created with IAC (01-user-team.yml)"
+      state: present
+      organization: "{{ customer }} ORG"
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+
+  - name: Making sure admin user1 exists
     ansible.controller.user:
       organization: "{{ customer }} ORG"
       username: "{{ customer }}_user1"
+      password: "{{ user1_password }}"
+      email: swains@redhat.com
+      first_name: Sebastien
+      last_name: Wains
+      state: present
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+
+  - name: Making sure regular user2 exists
+    ansible.controller.user:
+      organization: "{{ customer }} ORG"
+      username: "{{ customer }}_user2"
       password: "{{ user1_password }}"
       email: swains@redhat.com
       first_name: Sebastien
@@ -47,11 +72,35 @@
       controller_username: "{{ aap2_username }}"
       controller_password: "{{ aap2_password }}"
       validate_certs: False
+  - name: Add user2 in team2
+    ansible.controller.role:
+      organization: "{{ customer }} ORG"
+      user: "{{ customer }}_user2"
+      target_team: "{{ customer }}_team2"
+      role: member
+      state: present
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
 
-  - name: Associate new user to organization
+  - name: Associate user1 to organization and make admin
     ansible.controller.role:
       user: "{{ customer }}_user1"
       target_team: "{{ customer }}_team1"
+      organization: "{{ customer }} ORG"
+      organizations:
+      - "{{ customer }} ORG"
+      role: admin
+      state: present
+      controller_host: "{{ aap2_host }}"
+      controller_username: "{{ aap2_username }}"
+      controller_password: "{{ aap2_password }}"
+      validate_certs: False
+  - name: Associate user2 to organization and make member
+    ansible.controller.role:
+      user: "{{ customer }}_user2"
+      target_team: "{{ customer }}_team2"
       organization: "{{ customer }} ORG"
       organizations:
       - "{{ customer }} ORG"
